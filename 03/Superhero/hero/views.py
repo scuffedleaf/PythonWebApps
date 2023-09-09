@@ -16,14 +16,14 @@ class SpiderManView(TemplateView):
         }
 
 
-class IronManView(TemplateView):
+class BlackPantherView(TemplateView):
     template_name = "hero.html"
 
     def get_context_data(self, **kwargs):
         return {
-            'title': 'Iron Man',
-            'body': 'My name is Tony Stark, but I am Iron Man',
-            'image': '/static/images/iron_man.jpg'
+            'title': 'Black Panther',
+            'body': 'The living are not done with you. Wakanda Forever!',
+            'image': '/static/images/blackPanther.png'
         }
 
 
