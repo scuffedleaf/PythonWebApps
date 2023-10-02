@@ -1,0 +1,22 @@
+{% extends 'theme.html' %}
+
+
+
+{% block content %}
+
+<!--<h3>Hero Detail</h3>-->
+<div class="col-md">
+    <h3>{{title}}</h3>
+    <p>
+        <img class="Hero" src="{{image}}" alt="{{image}}" width="190">
+    </p>
+    <p>
+        <b>Strengths:</b> {{strength1}}, {{strength2}}, {{strength3}}
+    </p>
+    <p>
+        <b>Weaknesses:</b> {{weakness1}}, {{weakness2}}, {{weakness3}}
+    </p>
+</div>
+
+
+{% endblock content %}

@@ -9,10 +9,7 @@ class PhotoView(TemplateView):
         name = kwargs['name']
         image = f'/static/images/{name}'
         return {'photo': image}
-    
-def photo_list():
-
-    return photos   
+       
 
 class PhotoListView(TemplateView):
     template_name = 'photos.html'
