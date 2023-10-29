@@ -17,7 +17,7 @@ urlpatterns = [
 urlpatterns = [
 
     # admin
-    path(r'admin/', site.urls),
+    path(r'admin/', admin.site.urls),
 
     # Home
     path('', RedirectView.as_view(url='hero/')),
