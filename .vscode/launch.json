@@ -46,7 +46,8 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/14/SoftwarePlanner",
+            // "cwd": "${workspaceFolder}/14/SoftwarePlanner",
+            "cwd": "${workspaceFolder}/student/08/tdd",
             "args": [
                 "plan"
             ],
@@ -59,7 +60,7 @@
             "request": "launch",
             "program": "manage.py",
             // "cwd": "${workspaceFolder}/14/SoftwarePlanner",
-            "cwd": "${workspaceFolder}/studet/08/TDD",
+            "cwd": "${workspaceFolder}/student/08/TDD",
             "args": [
                 "pages"
             ],
