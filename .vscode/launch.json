@@ -18,6 +18,18 @@
             "justMyCode": true
         },
         {
+            "name": "Run server",
+            "type": "python",
+            "request": "launch",
+            "program": "manage.py",
+            "cwd": "${workspaceFolder}/Student/TDD",
+            "args": [
+                "test",
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
             "name": "Django Test",
             "type": "python",
             "request": "launch",
@@ -46,7 +58,8 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/14/SoftwarePlanner",
+            // "cwd": "${workspaceFolder}/14/SoftwarePlanner",
+            "cwd": "${workspaceFolder}/studet/08/TDD",
             "args": [
                 "pages"
             ],
