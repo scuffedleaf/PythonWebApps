@@ -1,7 +1,8 @@
 from django.urls import path, include
-from .views import HeroCreateView, HeroDeleteView, HeroDetailView, HeroListView, HeroUpdateView, SignUpView, UserUpdateView, ArticleCreateView
+
+from .views_accounts import UserAddView, UserUpdateView
+from .views_hero import HeroCreateView, HeroDeleteView, HeroDetailView, HeroListView, HeroUpdateView
 from django.contrib import admin
-from django.views.generic import RedirectView
 
 urlpatterns = [
 
@@ -11,17 +12,14 @@ urlpatterns = [
     path('add',             HeroCreateView.as_view(),  name='hero_add'),
     path('<int:pk>/',       HeroUpdateView.as_view(),  name='hero_edit'),
     path('<int:pk>/delete', HeroDeleteView.as_view(),  name='hero_delete'),
-    path('add_article',     ArticleCreateView.as_view(),  name='add_article'),
-    
 
     # Login/Logout code
     path('accounts/', include('django.contrib.auth.urls')),
-    path("accounts/signup/", SignUpView.as_view(), name="signup"),
-    path('accounts/profile/', RedirectView.as_view(url='../..')),
-
+    path('accounts/<int:pk>/',          UserUpdateView.as_view(),   name='account_edit'),
+    path('accounts/signup/',            UserAddView.as_view(),      name='signup'),
 
     # Admin views for users
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     # path('admin/', include('admin.site.urls')),   Don't do this!
 
 ]

@@ -26,27 +26,17 @@
     </style>
 </head>
 
-<body class=" bg-dark text-light">
+<body class="bg-dark text-light">
 
-    <header class="bg-danger p-5 mb-5">
-        <div class="row">
-            <div class="col-11">
-                <h1>Hero Database</h1>
-            </div>
-            <div class="col">
-                <a href="/" class="btn btn-dark">Home</a>
-            </div>
-        </div>
-        <div class="row">
-            <h2>Data Views Application</h2>
-        </div>
-        <p>{% if user.is_authenticated %}
-        <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
-        {% else %}
-        <p>Welcome, new user. Please log in.</p>
-        <a href="{% url 'login' %}" class="btn btn-dark">Log In</a>
-        <a href="{% url 'signup' %}" class="btn btn-dark">Sign Up</a>
-        {% endif %}</p>
+    {% block navbar %}
+    {% include '_navbar.html' %}
+    {% endblock navbar %}
+
+
+    <header class="bg-danger p-5 mb-5 ">
+        <h1>Hero Database</h1>
+        <h2>Data Views Application</h2>
+
     </header>
 
     <div class="container m-5">
